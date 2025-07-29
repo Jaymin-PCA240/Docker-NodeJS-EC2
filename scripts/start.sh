@@ -9,11 +9,11 @@ echo "Logging into Amazon ECR..."
 aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $REPO
 
 echo "Stopping and removing any existing container..."
-docker stop my-app || true
-docker rm my-app || true
+sudo docker stop my-app || true
+sudo docker rm my-app || true
 
 echo "Pulling latest image..."
-docker pull $REPO:latest
+sudo docker pull $REPO:latest
 
 echo "Running container..."
-docker run -d --name my-app -p 3000:3000 $REPO:latest
+sudo docker run -d --name my-app -p 3000:3000 $REPO:latest
