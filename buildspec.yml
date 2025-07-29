@@ -19,7 +19,6 @@ phases:
       - docker build -t my-app:$IMAGE_TAG .
       - docker tag my-app:$IMAGE_TAG $ECR_REPO:$IMAGE_TAG
       - docker tag my-app:$IMAGE_TAG $ECR_REPO:latest
-      - docker push $ECR_REPO:$IMAGE_TAG
       - docker push $ECR_REPO:latest
 
   post_build:
