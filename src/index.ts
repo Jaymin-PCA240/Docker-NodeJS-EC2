@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (_req, res) => {
-  res.send('Hello from TypeScript + Express from docker + CI/CD + ECS updated V2 Updated!');
+  res.send('Hello from TypeScript + Express from docker + CI/CD + ECS updated V2 Updated EC2!');
 });
 
 // Node.js example
