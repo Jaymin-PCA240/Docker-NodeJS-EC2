@@ -1,7 +1,7 @@
 version: 0.0
 files:
-  - source: scripts/start.sh
-    destination: /home/ec2-user/scripts
+  - source: /
+    destination: /home/ec2-user/app
 hooks:
   AfterInstall:
     - location: scripts/start.sh
