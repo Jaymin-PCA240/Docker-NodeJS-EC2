@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Correct permission fix
+sudo chown -R ec2-user:ec2-user /home/ec2-user/app
+
 set -e
 
 REGION="ap-south-1"
